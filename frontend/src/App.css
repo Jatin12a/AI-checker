@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body,#root{
+  height: 100%;
+  width: 100%;
+}
+main{
+  height: 100vh;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+
+}
+main .left,main .right{
+  height: 100%;
+  flex-basis: 50%;
+  /* border-radius: 0.7rem; */
+}
+main .left{
+  background-color: #000;
+  position: relative;
+  
+}
+.left .code,
+.code pre,
+.code pre code{
+  width: 100%;
+  margin:0;
+  background-color: #2a2929;
+    flex-grow: 1;
+    min-height: 100%; /* Let it expand */
+    max-height: 100%; /* Remove height restriction */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  
+  
+}
+.language-javascript{
+  margin: 0;
+}
+
+main .left .review{
+  position: absolute;
+  bottom:1rem;
+  right: 1rem;
+  background-color: blue;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+main .right{
+  background-color: #404040;
+  padding: 1rem 2rem;
+  flex: 1;
+  padding: 1rem 2rem;
+  overflow-y: auto;
+  max-height: 100vh;
+  color: white
+}
