@@ -1,65 +1,108 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body,#root{
+
+html, body, #root {
   height: 100%;
   width: 100%;
+  background: linear-gradient(135deg, #0b0f2c 10%, #18244a 50%, #26408f 90%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
-main{
+
+
+.heading {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 15px;
+  border-radius: 8px;
+  z-index: 999;
+
+}
+
+/* Main Layout */
+main {
   height: 100vh;
   width: 100%;
   padding: 1.5rem;
   display: flex;
   gap: 1rem;
-
 }
-main .left,main .right{
+
+main .left, main .right {
   height: 100%;
   flex-basis: 50%;
-  /* border-radius: 0.7rem; */
-}
-main .left{
-  background-color: #000;
+  border-radius: 0.7rem;
+  background: rgba(10, 20, 50, 0.8);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
   
+  
+  border: 3px solid;
+  border-image-source: linear-gradient(135deg, #ffcc00, #ff5733);
+  border-image-slice: 1;
 }
-.left .code,
-.code pre,
-.code pre code{
-  width: 100%;
-  margin:0;
-  background-color: #2a2929;
-    flex-grow: 1;
-    min-height: 100%; /* Let it expand */
-    max-height: 100%; /* Remove height restriction */
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-  
-  
+
+
+.left .code {
+  flex-grow: 1;
+  background: rgba(30, 40, 80, 0.9);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  overflow: auto;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.05);
 }
-.language-javascript{
+
+.language-javascript {
   margin: 0;
 }
 
-main .left .review{
+main .left .review {
   position: absolute;
-  bottom:1rem;
-  right: 1rem;
-  background-color: blue;
-  padding: 0.5rem 2rem;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #ffbf00, #ff9500);
+  padding: 0.7rem 2.5rem;
   border-radius: 0.5rem;
   color: white;
-  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.4);
+  transition: 0.3s;
 }
-main .right{
-  background-color: #404040;
-  padding: 1rem 2rem;
-  flex: 1;
+
+main .left .review:hover {
+  transform: scale(1.05);
+}
+
+main .right {
+  background: rgba(20, 30, 70, 0.9);
   padding: 1rem 2rem;
   overflow-y: auto;
   max-height: 100vh;
-  color: white
+  color: white;
+  border-radius: 0.7rem;
+}
+
+.aether-loading {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
