@@ -3,12 +3,11 @@ const router = express.Router();
 const aiService = require('../services/AIService');
 
 router.post('/getReview', async (req, res) => {
-    const prompt = req.body.prompt;
-    console.log(prompt);
-    if(!prompt) {
-        return res.status(400).json({ message: 'Prompt is required' });
+    const code = req.body.code;
+    if(!code) {
+        return res.status(400).json({ message: 'code is required' });
     }
-    const response = await aiService(prompt);
+    const response = await aiService(code);
     res.send( response );
 })
 
